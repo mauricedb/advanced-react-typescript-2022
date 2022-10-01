@@ -1,0 +1,26 @@
+{
+  "cheese": {
+    "name": "Cheese",
+    "price": 0.5
+  },
+  "peppers": {
+    "name": "Green and red bell pepper",
+    "price": 0.5
+  },
+  "pepperoni": {
+    "name": "Pepperoni",
+    "price": 0.75
+  },
+  "tomatoes": {
+    "name": "Tomatoes",
+    "price": 0.5
+  },
+  "olives": {
+    "name": "Olives",
+    "price": 0.6
+  },
+  "mushrooms": {
+    "name": "Mushrooms",
+    "price": "0.6"
+  }
+}

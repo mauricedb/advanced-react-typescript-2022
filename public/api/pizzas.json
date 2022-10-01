@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Pizza Margherita",
+    "ingredients": ["tomato sauce", "mozzarella", "basil"],
+    "price": 7.95,
+    "extras": ["olives"]
+  },
+  {
+    "name": "Pizza Quattro formaggi",
+    "ingredients": ["mozzarella", "gorgonzola", "provolone", "parmesan cheese"],
+    "price": 9.45,
+    "extras": ["cheese"]
+  },
+  {
+    "name": "Pizza Rustica",
+    "ingredients": [
+      "tomato sauce",
+      "mozzarella",
+      "seasoned minced beef",
+      "red peppers"
+    ],
+    "price": 9.95,
+    "extras": ["cheese", "pepperoni", "peppers"]
+  },
+  {
+    "name": "Pizza Ai funghi",
+    "ingredients": ["tomato sauce", "mozzarella", "mushrooms", "garlic"],
+    "price": 10.95,
+    "extras": ["cheese", "mushrooms"]
+  },
+  {
+    "name": "Pizza Hawaii",
+    "ingredients": ["tomato sauce", "mozzarella", "prosciutto", "pineapple"],
+    "price": 11.75,
+    "extras": ["cheese", "pepperoni", "tomatoes"]
+  }
+]
