@@ -12,7 +12,7 @@ export const TwoForms: FC = () => {
         }}
         onSubmit={function (values) {
           alert(
-            `${values.firstName} ${values.lastname}\n\n{JSON.stringify(values, null, 2)}`
+            `${values.firstName} ${values.lastName}\n\n{JSON.stringify(values, null, 2)}`
           );
         }}
       />
