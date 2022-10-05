@@ -41,6 +41,8 @@ export const PizzaOnMenu: FC<Props> = ({
             <LabeledCheckbox
               key={extra}
               checked={extras.includes(extra)}
+              disabled={extra === 'mushrooms'}
+              id={`${pizza.name}-${extra}`}
               onChange={() => {
                 setExtras((extras) => {
                   if (extras.includes(extra)) {
