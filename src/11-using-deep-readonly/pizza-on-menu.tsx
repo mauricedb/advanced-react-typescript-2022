@@ -1,4 +1,4 @@
-import type { Pizza, PizzaOnOrder } from './types';
+import type { DeepReadonly, Pizza, PizzaOnOrder } from './types';
 
 import { FC, useState } from 'react';
 
@@ -7,7 +7,7 @@ import { LabeledCheckbox } from '../components';
 import { getExtraIngredient } from './menu';
 
 type Props = {
-  pizza: Pizza;
+  pizza: DeepReadonly<Pizza>;
   onAddToOrder: (pizza: PizzaOnOrder) => void;
 };
 
