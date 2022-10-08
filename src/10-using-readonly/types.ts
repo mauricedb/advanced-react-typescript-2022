@@ -7,10 +7,10 @@ export type Pizza = {
 
 export type ExtraIngredients = Record<string, ExtraIngredient>;
 
-export type ExtraIngredient = {
+export type ExtraIngredient = Readonly<{
   name: string;
   price: number;
-};
+}>;
 
 export type PizzaOnOrder = {
   name: string;

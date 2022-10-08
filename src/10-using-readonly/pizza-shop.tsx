@@ -13,7 +13,7 @@ export const PizzaShop: FC = () => {
 
   const onPlaceOrder = () => {
     const extrasForAEuro = order.flatMap((pizza) =>
-      pizza.extraIngredients.filter((extra) => (extra.price = 1))
+      pizza.extraIngredients.filter((extra) => extra.price === 1)
     );
     console.log('Extras for a Euro', extrasForAEuro);
 
