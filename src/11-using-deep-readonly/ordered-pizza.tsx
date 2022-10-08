@@ -1,10 +1,10 @@
 import type { FC } from 'react';
-import type { PizzaOnOrder } from './types';
+import type { DeepReadonly, PizzaOnOrder } from './types';
 
 import { useIntl } from 'react-intl';
 
 type Props = {
-  pizza: PizzaOnOrder;
+  pizza: DeepReadonly<PizzaOnOrder>;
 };
 
 export const OrderedPizza: FC<Props> = ({ pizza }) => {

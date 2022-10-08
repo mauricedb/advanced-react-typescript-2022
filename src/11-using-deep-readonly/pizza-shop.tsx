@@ -1,4 +1,4 @@
-import type { PizzaOnOrder } from './types';
+import type { DeepReadonly, PizzaOnOrder } from './types';
 
 import { FC, useMemo, useState } from 'react';
 import { useIntl } from 'react-intl';
@@ -8,7 +8,7 @@ import { PizzaOnMenu } from './pizza-on-menu';
 
 export const PizzaShop: FC = () => {
   const { formatNumber } = useIntl();
-  const [order, setOrder] = useState<PizzaOnOrder[]>([]);
+  const [order, setOrder] = useState<DeepReadonly<PizzaOnOrder[]>>([]);
   const totalPrice = useMemo(() => calculateTotalPrice(order), [order]);
 
   const onPlaceOrder = () => {
@@ -17,16 +17,16 @@ export const PizzaShop: FC = () => {
     );
     console.log('Extras for a Euro', extrasForAEuro);
 
-    pizzas.push({
-      name: `New Pizza ${new Date().toLocaleTimeString()}`,
-      price: 10,
-      extras: ['cheese'],
-      ingredients: ['tomato sauce'],
-    });
+    // pizzas.push({
+    //   name: `New Pizza ${new Date().toLocaleTimeString()}`,
+    //   price: 10,
+    //   extras: ['cheese'],
+    //   ingredients: ['tomato sauce'],
+    // });
 
-    if (pizzas[0]) {
-      pizzas[0].price *= 10;
-    }
+    // if (pizzas[0]) {
+    //   pizzas[0].price *= 10;
+    // }
 
     setOrder([]);
   };
@@ -76,7 +76,7 @@ export const PizzaShop: FC = () => {
   );
 };
 
-function calculateTotalPrice(order: PizzaOnOrder[]) {
+function calculateTotalPrice(order: DeepReadonly<PizzaOnOrder[]>) {
   return order.reduce(
     (sum, pizza) =>
       sum +
