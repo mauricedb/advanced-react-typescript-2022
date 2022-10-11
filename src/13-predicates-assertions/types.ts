@@ -1,16 +1,16 @@
 export type Book = {
-  type: string;
+  type: 'book';
   title: string;
   description: string;
 };
 
 export type Magazine = {
-  type: string;
+  type: 'magazine';
   title: string;
 };
 
 export type Pen = {
-  type: string;
+  type: 'pen';
   color: string;
 };
 
@@ -44,4 +44,8 @@ export function assertPen(item: ItemsOnSale): asserts item is Pen {
   if (!isPen(item)) {
     throw new Error('Item is not a pen');
   }
+}
+
+export function assertNever(value: never): never {
+  throw new Error('Unexpected value: ' + JSON.stringify(value, null, 2));
 }
